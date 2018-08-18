@@ -10,12 +10,10 @@ def line(katz_deli)
     katz_deli.each do |person|
       place_in_line = line[index]
       index +=1
-      string << "#{place_in_line}. #{person} "
       #when index == line_length, don't add a space at the end of the person you add the list
-      #index >= line_length ? string << "#{place_in_line}. #{person}" : string << "#{place_in_line}. #{person} "
+      index >= line_length ? string << "#{place_in_line}. #{person}" : string << "#{place_in_line}. #{person} "
     end
-    final_string = string.pop
-    puts final_string
+    puts string
   end
 end
 
